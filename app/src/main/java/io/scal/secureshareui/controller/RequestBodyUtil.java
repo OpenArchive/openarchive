@@ -103,7 +103,7 @@ public class RequestBodyUtil {
                         long total = 0;
                         long read;
 
-                        while ((read = source.read(sink.buffer(), SEGMENT_SIZE)) != -1 && (mListener != null && mListener.continueUpload())) {
+                        while ((read = source.read(sink.getBuffer(), SEGMENT_SIZE)) != -1 && (mListener != null && mListener.continueUpload())) {
                             total += read;
                             if (mListener != null)
                                 mListener.transferred(total);
@@ -162,7 +162,7 @@ public class RequestBodyUtil {
                         long total = 0;
                         long read;
 
-                        while ((read = source.read(sink.buffer(), SEGMENT_SIZE)) != -1) {
+                        while ((read = source.read(sink.getBuffer(), SEGMENT_SIZE)) != -1) {
                             total += read;
                             listener.transferred(total);
                         }

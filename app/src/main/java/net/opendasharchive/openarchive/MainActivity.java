@@ -32,9 +32,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 
 import com.amulyakhare.textdrawable.TextDrawable;
-import com.danimahardhika.cafebar.CafeBar;
-import com.danimahardhika.cafebar.CafeBarCallback;
-import com.danimahardhika.cafebar.CafeBarTheme;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.zhihu.matisse.Matisse;

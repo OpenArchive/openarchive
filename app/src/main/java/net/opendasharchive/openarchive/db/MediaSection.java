@@ -15,17 +15,16 @@ import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
-import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
+import io.github.luizgrp.sectionedrecyclerviewadapter.Section;
 
-public class MediaSection extends StatelessSection {
+public class MediaSection extends Section {
 
     private List<Media> mMediaList;
     private String mTitle;
     private Context mContext;
     private RecyclerView mRecyclerView;
 
-    public MediaSection (Context context, RecyclerView recyclerView, int mediaLayoutId, String title, List<Media> mediaList)
-    {
+    public MediaSection(Context context, RecyclerView recyclerView, int mediaLayoutId, String title, List<Media> mediaList) {
         super(SectionParameters.builder()
                 .itemResourceId(mediaLayoutId)
                 .headerResourceId(R.layout.media_section_header)

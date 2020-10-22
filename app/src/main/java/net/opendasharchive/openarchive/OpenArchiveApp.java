@@ -21,9 +21,7 @@ import org.acra.ACRA;
 import org.acra.ReportField;
 import org.acra.annotation.AcraCore;
 import org.acra.config.CoreConfigurationBuilder;
-import org.acra.config.DialogConfigurationBuilder;
 import org.acra.config.MailSenderConfigurationBuilder;
-import org.acra.config.ToastConfigurationBuilder;
 import org.acra.data.StringFormat;
 
 import info.guardianproject.netcipher.client.StrongBuilder;
