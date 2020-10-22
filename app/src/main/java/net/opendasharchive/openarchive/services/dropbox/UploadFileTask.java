@@ -2,9 +2,6 @@ package net.opendasharchive.openarchive.services.dropbox;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.Handler;
-import android.os.Message;
-import android.os.RecoverySystem;
 
 import com.dropbox.core.DbxException;
 import com.dropbox.core.NetworkIOException;

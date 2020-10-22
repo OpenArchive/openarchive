@@ -15,22 +15,22 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import net.opendasharchive.openarchive.R;
-import net.opendasharchive.openarchive.db.Project;
-import net.opendasharchive.openarchive.db.ProjectListAdapter;
-import net.opendasharchive.openarchive.db.Space;
-import net.opendasharchive.openarchive.services.archivedotorg.ArchiveOrgLoginActivity;
-import net.opendasharchive.openarchive.onboarding.SpaceSetupActivity;
-import net.opendasharchive.openarchive.services.dropbox.DropboxLoginActivity;
-import net.opendasharchive.openarchive.services.webdav.WebDAVLoginActivity;
-import net.opendasharchive.openarchive.util.Prefs;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.abdularis.civ.AvatarImageView;
+
+import net.opendasharchive.openarchive.R;
+import net.opendasharchive.openarchive.db.Project;
+import net.opendasharchive.openarchive.db.ProjectListAdapter;
+import net.opendasharchive.openarchive.db.Space;
+import net.opendasharchive.openarchive.onboarding.SpaceSetupActivity;
+import net.opendasharchive.openarchive.services.archivedotorg.ArchiveOrgLoginActivity;
+import net.opendasharchive.openarchive.services.dropbox.DropboxLoginActivity;
+import net.opendasharchive.openarchive.services.webdav.WebDAVLoginActivity;
+import net.opendasharchive.openarchive.util.Prefs;
 
 import java.util.Iterator;
 import java.util.List;

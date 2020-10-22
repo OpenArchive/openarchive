@@ -9,14 +9,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import net.opendasharchive.openarchive.R;
-import net.opendasharchive.openarchive.db.Media;
-import net.opendasharchive.openarchive.fragments.MediaListFragment;
-import net.opendasharchive.openarchive.publish.PublishService;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import net.opendasharchive.openarchive.R;
+import net.opendasharchive.openarchive.db.Media;
+import net.opendasharchive.openarchive.fragments.MediaListFragment;
 
 import static io.scal.secureshareui.controller.SiteController.MESSAGE_KEY_MEDIA_ID;
 import static io.scal.secureshareui.controller.SiteController.MESSAGE_KEY_PROGRESS;

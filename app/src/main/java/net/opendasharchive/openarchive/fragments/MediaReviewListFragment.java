@@ -4,17 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.db.Media;
 import net.opendasharchive.openarchive.db.MediaAdapter;
 
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class MediaReviewListFragment extends MediaListFragment {
 

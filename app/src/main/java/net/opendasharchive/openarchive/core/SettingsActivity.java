@@ -15,7 +15,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 import net.opendasharchive.openarchive.R;
-import net.opendasharchive.openarchive.util.Prefs;
 
 import org.witness.proofmode.crypto.PgpUtils;
 

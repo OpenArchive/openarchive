@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.opendasharchive.openarchive.media.PreviewMediaListActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.db.Collection;
 import net.opendasharchive.openarchive.db.Media;
 import net.opendasharchive.openarchive.db.MediaAdapter;
+import net.opendasharchive.openarchive.media.PreviewMediaListActivity;
 
 import java.util.HashMap;
 import java.util.List;
-
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class MediaGridFragment extends MediaListFragment {
 

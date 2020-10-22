@@ -1,6 +1,5 @@
 package net.opendasharchive.openarchive.projects;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -20,8 +19,6 @@ import net.opendasharchive.openarchive.db.Space;
 
 import java.util.Date;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class CreateNewProjectActivity extends AppCompatActivity {
 

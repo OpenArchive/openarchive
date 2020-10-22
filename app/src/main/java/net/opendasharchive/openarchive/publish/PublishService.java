@@ -17,14 +17,18 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Message;
 import android.util.Log;
-import android.widget.Toast;
 
-import net.opendasharchive.openarchive.db.Space;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import net.opendasharchive.openarchive.MainActivity;
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.db.Collection;
 import net.opendasharchive.openarchive.db.Media;
 import net.opendasharchive.openarchive.db.Project;
+import net.opendasharchive.openarchive.db.Space;
 import net.opendasharchive.openarchive.services.dropbox.DropboxSiteController;
 import net.opendasharchive.openarchive.services.webdav.WebDAVSiteController;
 import net.opendasharchive.openarchive.util.Prefs;
@@ -34,14 +38,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.core.app.NotificationCompat;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-
-import com.orm.query.Condition;
-import com.orm.query.Select;
 
 import io.scal.secureshareui.controller.ArchiveSiteController;
 import io.scal.secureshareui.controller.SiteController;

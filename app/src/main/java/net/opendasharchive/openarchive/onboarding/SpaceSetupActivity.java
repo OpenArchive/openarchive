@@ -15,7 +15,6 @@ import net.opendasharchive.openarchive.services.dropbox.DropboxLoginActivity;
 import net.opendasharchive.openarchive.services.webdav.WebDAVLoginActivity;
 
 import java.util.Iterator;
-import java.util.List;
 
 import io.scal.secureshareui.controller.SiteController;
 

@@ -1,8 +1,5 @@
 package net.opendasharchive.openarchive.db;
 
-import android.app.Activity;
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.view.ActionMode;
@@ -13,25 +10,24 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
-import net.opendasharchive.openarchive.R;
-import net.opendasharchive.openarchive.fragments.MediaListFragment;
-import net.opendasharchive.openarchive.media.BatchReviewMediaActivity;
-import net.opendasharchive.openarchive.util.Globals;
-import net.opendasharchive.openarchive.media.ReviewMediaActivity;
-import net.opendasharchive.openarchive.fragments.MediaViewHolder;
-import net.opendasharchive.openarchive.util.Prefs;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MotionEventCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
+import net.opendasharchive.openarchive.R;
+import net.opendasharchive.openarchive.fragments.MediaListFragment;
+import net.opendasharchive.openarchive.fragments.MediaViewHolder;
+import net.opendasharchive.openarchive.media.BatchReviewMediaActivity;
+import net.opendasharchive.openarchive.media.ReviewMediaActivity;
+import net.opendasharchive.openarchive.util.Globals;
+import net.opendasharchive.openarchive.util.Prefs;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by micahjlucas on 1/20/15.

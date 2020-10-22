@@ -1,21 +1,21 @@
 package net.opendasharchive.openarchive.db;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.opendasharchive.openarchive.R;
-import net.opendasharchive.openarchive.media.ReviewMediaActivity;
 import net.opendasharchive.openarchive.fragments.MediaViewHolder;
+import net.opendasharchive.openarchive.media.ReviewMediaActivity;
 import net.opendasharchive.openarchive.util.Globals;
 
 import java.util.List;
 
-import androidx.recyclerview.widget.RecyclerView;
-import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
 import io.github.luizgrp.sectionedrecyclerviewadapter.Section;
+import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
 
 public class MediaSection extends Section {
 

@@ -8,8 +8,6 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
-import com.dropbox.core.v1.DbxEntry;
-
 import java.io.File;
 
 

@@ -1,28 +1,11 @@
 package net.opendasharchive.openarchive.db;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.media.ThumbnailUtils;
-import android.net.Uri;
-import android.provider.MediaStore;
-import android.util.Log;
-
 import com.google.gson.annotations.SerializedName;
 import com.orm.SugarRecord;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
-
-import net.opendasharchive.openarchive.R;
-import net.opendasharchive.openarchive.util.Utility;
 
 /**
  * Created by micahjlucas on 1/11/15.

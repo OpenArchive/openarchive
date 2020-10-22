@@ -8,13 +8,13 @@ import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import net.opendasharchive.openarchive.util.Globals;
 import net.opendasharchive.openarchive.R;
+import net.opendasharchive.openarchive.util.Globals;
 
-import java.io.IOException;
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.Closeable;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by micahjlucas on 12/15/14.

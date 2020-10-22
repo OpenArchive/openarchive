@@ -4,8 +4,6 @@ package io.scal.secureshareui.controller;
 import android.content.ContentResolver;
 import android.net.Uri;
 
-import com.thegrizzlylabs.sardineandroid.SardineListener;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

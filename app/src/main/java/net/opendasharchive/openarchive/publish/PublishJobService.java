@@ -10,7 +10,6 @@ import androidx.core.content.ContextCompat;
 
 import net.opendasharchive.openarchive.db.Media;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

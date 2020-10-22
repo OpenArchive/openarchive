@@ -3,21 +3,16 @@ package net.opendasharchive.openarchive.services.archivedotorg;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.db.Media;
-import net.opendasharchive.openarchive.db.Project;
 import net.opendasharchive.openarchive.util.Globals;
-
-import java.util.HashMap;
-
-import androidx.appcompat.app.AppCompatActivity;
-import io.scal.secureshareui.controller.SiteController;
 
 
 public class ArchiveSettingsActivity extends AppCompatActivity {

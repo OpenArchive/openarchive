@@ -21,6 +21,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.FileProvider;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import com.github.derlio.waveform.SimpleWaveformView;
 import com.github.derlio.waveform.soundfile.SoundFile;
 import com.squareup.picasso.Picasso;
@@ -42,14 +50,6 @@ import net.opendasharchive.openarchive.util.Utility;
 
 import java.io.File;
 import java.util.ArrayList;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.FileProvider;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import static net.opendasharchive.openarchive.MainActivity.INTENT_FILTER_NAME;
 

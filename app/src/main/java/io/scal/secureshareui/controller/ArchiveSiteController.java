@@ -12,21 +12,16 @@ import android.webkit.MimeTypeMap;
 
 import androidx.annotation.NonNull;
 
-import com.thegrizzlylabs.sardineandroid.impl.OkHttpSardine;
-import com.thegrizzlylabs.sardineandroid.impl.SardineException;
 import com.thegrizzlylabs.sardineandroid.impl.handler.ResponseHandler;
-import com.thegrizzlylabs.sardineandroid.impl.handler.VoidResponseHandler;
 
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.db.Media;
-import net.opendasharchive.openarchive.db.Project;
 import net.opendasharchive.openarchive.db.Space;
 import net.opendasharchive.openarchive.util.Globals;
 import net.opendasharchive.openarchive.util.Prefs;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -43,7 +38,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okhttp3.internal.http.ExchangeCodec;
 
 public class ArchiveSiteController extends SiteController {
 

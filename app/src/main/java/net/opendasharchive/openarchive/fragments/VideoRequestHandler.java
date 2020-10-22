@@ -3,17 +3,13 @@ package net.opendasharchive.openarchive.fragments;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
-import android.media.ThumbnailUtils;
 import android.net.Uri;
-import android.os.Build;
-import android.provider.MediaStore;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Request;
 import com.squareup.picasso.RequestHandler;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 public class VideoRequestHandler extends RequestHandler{
     public final static String SCHEME_VIDEO="video";

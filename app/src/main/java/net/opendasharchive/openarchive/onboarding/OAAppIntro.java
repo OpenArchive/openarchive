@@ -5,13 +5,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.github.paolorotolo.appintro.AppIntro;
 
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.util.Prefs;
-
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import info.guardianproject.netcipher.proxy.OrbotHelper;
 

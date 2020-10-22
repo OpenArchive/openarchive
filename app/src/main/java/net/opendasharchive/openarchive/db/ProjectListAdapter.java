@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.projects.EditProjectActivity;
 import net.opendasharchive.openarchive.util.Globals;

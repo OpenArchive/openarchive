@@ -7,7 +7,6 @@ import com.orm.SugarRecord;
 import net.opendasharchive.openarchive.util.Prefs;
 
 import java.util.Iterator;
-import java.util.List;
 
 public class Space extends SugarRecord {
 

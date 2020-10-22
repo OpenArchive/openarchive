@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.github.derlio.waveform.SimpleWaveformView;
 import com.github.derlio.waveform.soundfile.SoundFile;
 import com.squareup.picasso.Picasso;
@@ -19,12 +21,9 @@ import net.opendasharchive.openarchive.db.Media;
 import net.opendasharchive.openarchive.util.FileUtils;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.HashMap;
-
-import androidx.recyclerview.widget.RecyclerView;
 
 public class MediaViewHolder extends RecyclerView.ViewHolder {
 
