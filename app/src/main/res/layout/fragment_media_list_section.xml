@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:id="@+id/mediasection"
     xmlns:android="http://schemas.android.com/apk/res/android">
->
+
     <TextView
         android:id="@+id/sectionstatus"
         android:layout_width="wrap_content"

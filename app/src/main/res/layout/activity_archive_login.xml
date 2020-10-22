@@ -3,7 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.scal.secureshareuilibrary.ArchiveLoginActivity"
+    tools:context="io.scal.secureshareui.login.ArchiveLoginActivity"
     tools:ignore="MergeRootFrame"
     android:orientation="vertical" >
 
