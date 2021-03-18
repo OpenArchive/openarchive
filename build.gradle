@@ -1,5 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    apply from: './dependencies.gradle'
+    apply from: './config.gradle'
     repositories {
         google()
         jcenter()
@@ -8,18 +10,17 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-        classpath 'com.testdroid:gradle:2.63.1'
-        classpath "gradle.plugin.com.browserstack.gradle:browserstack-gradle-plugin:2.3.1"
+        classpath "com.android.tools.build:gradle:$versions.gradle_tools"
+        classpath "com.neenbedankt.gradle.plugins:android-apt:$versions.neenbedankt_gradle_plugin"
+        classpath "com.testdroid:gradle:$versions.testdroid_gradle"
+        classpath "gradle.plugin.com.browserstack.gradle:browserstack-gradle-plugin:$versions.browserstack_gradle_plugin"
     }
 }
 
 
-
 configurations.all {
     resolutionStrategy {
-        force 'com.android.support:support-v4:28.0.0'
+        force "com.android.support:support-v4:$versions.support_v4"
     }
 }
 
@@ -33,14 +34,8 @@ allprojects {
         maven { url "https://raw.githubusercontent.com/guardianproject/gpmaven/master" }
 
     }
-    project.ext {
-        // these are common variables used in */build.gradle
-        // these are common variables used in */build.gradle
-        buildToolsVersion="28.0.3"
-        compileSdkVersion=28
-        minSdkVersion=16
-        targetSdkVersion=28
-        appcompat='com.android.support:appcompat-v7:28.0.0'
-    }
+}
 
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

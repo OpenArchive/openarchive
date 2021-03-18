@@ -1,16 +1,11 @@
 apply plugin: 'com.android.application'
-
+apply from : '../dependencies.gradle'
+apply from : '../config.gradle'
 
 def dropboxKey = "\"foo\""
 
 if (project.hasProperty("dropbox_key"))
     dropboxKey = project.ext.dropbox_key
-
-
-dependencies {
-    implementation 'com.google.dagger:dagger:2.0'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.0'
-}
 
 android {
     compileOptions {
@@ -24,14 +19,15 @@ android {
 
     signingConfigs {
     }
-    compileSdkVersion 28
-    buildToolsVersion project.ext.buildToolsVersion
+
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
     defaultConfig {
         applicationId "net.opendasharchive.openarchive"
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 20313
-        versionName "0.2.3-BETA-3"
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
         archivesBaseName = "OpenArchive-$versionName"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
@@ -69,70 +65,64 @@ android {
         }
     }
 
-    buildToolsVersion '28.0.3'
 }
 
-def netCipherVersion = "2.0.0-alpha1"
-
 dependencies {
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation libraries.gson
     //noinspection GradleCompatible
-    implementation 'com.squareup.okhttp3:okhttp:3.14.0'
-    implementation 'com.squareup.okio:okio:1.17.4'
-    implementation 'com.github.satyan:sugar:1.5'
-    implementation 'net.i2p.android.ext:floatingactionbutton:1.10.1'
+    implementation libraries.okhttp
+    implementation libraries.okio
 
-    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
-    implementation 'com.github.paolorotolo:appintro:4.1.0'
-    implementation 'com.github.cleaninsights:cleaninsights-android-sdk:4058e052f5'
-    implementation 'com.github.derlio:audio-waveform:v1.0.1'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation libraries.satyan_sugar
+    implementation libraries.i2p_floating_action
+    implementation libraries.amulyakhare_textdrawable
+    implementation libraries.appintro
+    implementation libraries.picasso
 
-    implementation "com.facebook.fresco:fresco:1.10.0"
-    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0'
+    implementation libraries.cleaninsights_android_sdk
+    implementation libraries.audio_waveform
+    implementation libraries.fresco
+    implementation libraries.frescoimageviewer
 
-    implementation 'com.github.abdularis:circularimageview:1.4'
-    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
-
-    implementation "info.guardianproject.netcipher:netcipher:${netCipherVersion}"
-    implementation "info.guardianproject.netcipher:netcipher-okhttp3:${netCipherVersion}"
+    implementation libraries.circular_imageview
+    implementation libraries.netCipher
+    implementation libraries.netCipherOkHttp
+    implementation libraries.open_timestamps
 
     //from here: https://github.com/guardianproject/proofmode
-    implementation 'org.witness:android-libproofmode:0.0.4'
-    implementation 'com.eternitywall:opentimestamps:0.1.14.1'
+    implementation libraries.android_libproofmode
 
     //  implementation 'com.github.WrathChaos:MediaPickerLib:0.1.4'
-    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    implementation libraries.matisse
 
     //adding web dav support: https://github.com/thegrizzlylabs/sardine-android'
-    implementation 'com.github.guardianproject:sardine-android:89f7eae512'
+    implementation libraries.sardine_android
 
     //header recyclerview
-    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:2.0.0'
+    implementation libraries.sectioned_recyclerview_adapter
 
     implementation group: 'androidx.preference', name: 'preference', version: '1.1.1'
 
     //crash reporting
-    def acraVersion = '5.4.0'
-    implementation "ch.acra:acra-core:$acraVersion"
-    implementation "ch.acra:acra-http:$acraVersion"
-    implementation "ch.acra:acra-dialog:$acraVersion"
-    implementation "ch.acra:acra-toast:$acraVersion"
-    implementation "ch.acra:acra-mail:$acraVersion"
+    implementation libraries.acra_core
+    implementation libraries.acra_http
+    implementation libraries.acra_dialog
+    implementation libraries.acra_toast
+    implementation libraries.acra_mail
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.3.0-alpha01'
+    implementation libraries.appcompat
+    implementation libraries.constraint_layout
+    implementation libraries.material
 
-    implementation 'com.dropbox.core:dropbox-core-sdk:3.0.6'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+    implementation libraries.dropbox_core_sdk
+    implementation libraries.legacy_support_v4
+    implementation libraries.coordinator_layout
 
     //user prompts
-    implementation 'com.github.danimahardhika:cafebar:1.3.1'
+    implementation libraries.cafebar
 
     //alerter
-    implementation 'com.tapadoo.android:alerter:5.1.2'
+    implementation libraries.alerter
 
 }
 
