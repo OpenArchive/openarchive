@@ -99,7 +99,7 @@ dependencies {
 
     //from here: https://github.com/guardianproject/proofmode
     implementation 'org.witness:android-libproofmode:0.0.4'
-    implementation 'com.eternitywall:opentimestamps:0.1.14.1'
+    implementation 'com.eternitywall:java-opentimestamps:1.20'
 
     //  implementation 'com.github.WrathChaos:MediaPickerLib:0.1.4'
     implementation 'com.zhihu.android:matisse:0.5.3-beta3'
