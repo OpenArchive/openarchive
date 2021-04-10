@@ -16,11 +16,6 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## Android
-### android test
-```
-fastlane android test
-```
-Runs all the tests
 ### android beta
 ```
 fastlane android beta
@@ -31,6 +26,15 @@ Submit a new Beta Build to Beta
 fastlane android deploy
 ```
 Deploy a new version to the Google Play
+
+```
+fastlane android slack distribution
+```
+### android slack distribution
+Get Slack OAuth Token from [Getting Slack OAuth Token](https://api.slack.com/authentication/oauth-v2)
+If .env doesn't exist , add file under fastlane
+Add hook and token as .env.example
+Run _fastlane beta_ in terminal
 
 ----
 
