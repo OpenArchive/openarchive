@@ -78,7 +78,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     //noinspection GradleCompatible
     implementation 'com.squareup.okhttp3:okhttp:3.14.0'
-    implementation 'com.squareup.okio:okio:1.17.4'
     implementation 'com.github.satyan:sugar:1.5'
     implementation 'net.i2p.android.ext:floatingactionbutton:1.10.1'
 
@@ -98,8 +97,7 @@ dependencies {
     implementation "info.guardianproject.netcipher:netcipher-okhttp3:${netCipherVersion}"
 
     //from here: https://github.com/guardianproject/proofmode
-    implementation 'org.witness:android-libproofmode:0.0.4'
-    implementation 'com.eternitywall:java-opentimestamps:1.20'
+    implementation 'com.github.guardianproject:proofmode:0.0.13-RC-3'
 
     //  implementation 'com.github.WrathChaos:MediaPickerLib:0.1.4'
     implementation 'com.zhihu.android:matisse:0.5.3-beta3'

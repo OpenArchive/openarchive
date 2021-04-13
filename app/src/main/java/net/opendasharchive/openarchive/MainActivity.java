@@ -395,7 +395,12 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
                 }
                 protected Media doInBackground(Void... unused) {
-                    return handleOutsideMedia(data);
+                    try {
+                        return handleOutsideMedia(data);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                        return null;
+                    }
                 }
                 protected void onPostExecute(Media media) {
                     // Post Code
@@ -556,7 +561,12 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
                     }
 
                     protected List<Media> doInBackground(List<Uri>... params) {
-                        return importMedia(params[0]);
+                        try {
+                            return importMedia(params[0]);
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                            return null;
+                        }
                     }
 
                     protected void onPostExecute(List<Media> media) {
@@ -585,8 +595,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
     }
 
-    private ArrayList<Media> importMedia (List<Uri> importUri)
-    {
+    private ArrayList<Media> importMedia (List<Uri> importUri) throws FileNotFoundException {
         ArrayList<Media> result = new ArrayList<>();
 
         for (Uri uri: importUri) {
@@ -598,8 +607,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         return result;
     }
 
-    private Media importMedia (Uri uri)
-    {
+    private Media importMedia (Uri uri) throws FileNotFoundException {
         if (uri == null)
             return null;
 
@@ -666,7 +674,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         media.setUpdateDate(media.getCreateDate());
         media.status = Media.STATUS_LOCAL;
 
-        media.mediaHashString =HashUtils.getSHA256FromFileContent(fileImport);
+        media.mediaHashString =HashUtils.getSHA256FromFileContent(getContentResolver().openInputStream(Uri.fromFile(fileImport)));
         media.projectId = project.getId();
 
         if (title != null)
@@ -676,7 +684,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         return media;
     }
 
-    private Media handleOutsideMedia(Intent intent) {
+    private Media handleOutsideMedia(Intent intent) throws FileNotFoundException {
 
         Media media = null;
 
