@@ -70,7 +70,7 @@ public class ArchiveSiteController extends SiteController {
 	private void initClient (Context context)
     {
 
-        if (!Prefs.INSTANCE.getUseTor() && OrbotHelper.isOrbotInstalled(context))
+        if (true)
         {
             this.client = new OkHttpClient.Builder().build();
         }

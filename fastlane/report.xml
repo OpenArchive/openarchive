@@ -5,17 +5,42 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000972">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000367">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: clean assembleRelease" time="361.577363">
+      <testcase classname="fastlane.lanes" name="1: slack" time="1.7028">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: assembledebug" time="14.715441">
+      <testcase classname="fastlane.lanes" name="2: clean assembleRelease" time="103.848062">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: assembledebug" time="79.991117">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: slack" time="1.10928">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: Switch to android upload_to_slack lane" time="0.000535">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: echo Uploading OpenArchive-0.2.3-BETA-3-releaseflavor-debug.apk to Slack" time="0.014276">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: curl https://slack.com/api/files.upload -F token=&quot;xoxp-1875869103395-1872582164549-2076059772545-558593967f8edf703954b02ca83d36a0&quot; -F channels=&quot;#distribution&quot; -F title=&quot;OpenArchive-0.2.3-BETA-3-releaseflavor-debug.apk&quot; -F filename=&quot;OpenArchive-0.2.3-BETA-3-releaseflavor-debug.apk&quot; -F file=@/Users/ozgegundogdu/Documents/Works/Self/Save-app-android-origin/app/build/outputs/apk/releaseflavor/debug/OpenArchive-0.2.3-BETA-3-releaseflavor-debug.apk" time="260.766945">
         
       </testcase>
     

@@ -32,17 +32,6 @@ fastlane android deploy
 ```
 Deploy a new version to the Google Play
 
-```
-fastlane android slack distribution
-```
-### android slack distribution
-Get Slack OAuth Token from [Getting Slack OAuth Token](https://api.slack.com/authentication/oauth-v2)
-If .env doesn't exist , add file under fastlane
-Add hook and token as .env.example
-Run _fastlane beta_ in terminal
-
-----
-
 ----
 
 This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.

@@ -20,8 +20,8 @@ public class PublishJobService extends JobService {
 
         List<Media> results = Media.find(Media.class, "status = ?", Media.STATUS_QUEUED + "");
 
-        if (results.size() > 0)
-            ContextCompat.startForegroundService(this, new Intent(this, PublishService.class));
+        //if (results.size() > 0)
+            //ContextCompat.startForegroundService(this, new Intent(this, PublishService.class));
 
         return true;
     }

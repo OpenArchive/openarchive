@@ -34,7 +34,8 @@ ext {
             open_timestamps               : '0.1.14.1',
             kotlin                        : '1.3.72',
             core_ktx                      : '1.3.2',
-            coroutines                    : '1.3.9'
+            coroutines                    : '1.3.9',
+            glide                         : '4.12.0'
     ]
 
     libraries = [
@@ -73,6 +74,8 @@ ext {
             acra_mail                     : "ch.acra:acra-mail:$versions.acra",
             kotlin_stdlib                 : "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin",
             core_ktx                      : "androidx.core:core-ktx:$versions.core_ktx",
-            coroutines                    : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines"
+            coroutines                    : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+            glide                         : "com.github.bumptech.glide:glide:$versions.glide",
+            glideAnnotate                 : "com.github.bumptech.glide:compiler:$versions.glide"
     ]
 }

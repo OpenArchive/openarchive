@@ -336,4 +336,6 @@
     <string name="archive_over_tor_enable_orbot">To enable advanced network security, you should enable the \"Use Orbot\" option now or later in settings</string>
     <string name="action_install">Install</string>
     <string name="action_enable">Enable</string>
+    <string name="batch_waiting_for_upload">Waiting for upload...</string>
+    <string name="batch_uploading_now">Uploading now...</string>
 </resources>

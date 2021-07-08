@@ -7,10 +7,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="net.opendasharchive.openarchive.publish.UploadManagerActivity"
     tools:showIn="@layout/activity_upload_manager">
-<fragment
-    android:id="@+id/fragUploadManager"
-    class="net.opendasharchive.openarchive.fragments.MediaListFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    />
+
+    <fragment
+        android:id="@+id/fragUploadManager"
+        class="net.opendasharchive.openarchive.features.media.list.MediaListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

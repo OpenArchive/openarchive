@@ -7,4 +7,10 @@ object Constants {
     const val DROPBOX_USERNAME = "dropbox"
     const val DROPBOX_NAME = "dropbox"
 
+    const val SPACE_EXTRA = "space"
+
+    const val UPLOADING_URI = "UPLOADING_URI"
+    const val UPLOADING_MEDIA = "UPLOADING_MEDIA"
+
+    const val EMPTY_ID = -1L
 }

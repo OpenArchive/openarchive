@@ -259,7 +259,7 @@ object Utility {
                 prefix + "_" + timeStamp + "." + ext)
     }
 
-    fun getOutputMediaFile(context: Context, fileName: String): File? {
+    fun getOutputMediaFileByCache(context: Context, fileName: String): File? {
         val mediaStorageDir = context.cacheDir
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
@@ -271,15 +271,17 @@ object Utility {
                 "$timeStamp.$fileName")
     }
 
-    fun writeStreamToFile(input: InputStream, file: File?): Boolean {
+    fun writeStreamToFile(input: InputStream?, file: File?): Boolean {
         try {
             val output: OutputStream = FileOutputStream(file)
             val buffer = ByteArray(4 * 1024) // or other buffer size
             var read: Int
-            while (input.read(buffer).also { read = it } != -1) {
-                output.write(buffer, 0, read)
+            input?.let {
+                while (input.read(buffer).also { read = it } != -1) {
+                    output.write(buffer, 0, read)
+                }
+                output.flush()
             }
-            output.flush()
         } catch (e: FileNotFoundException) {
             e.printStackTrace()
             return false
@@ -288,7 +290,7 @@ object Utility {
             return false
         } finally {
             try {
-                input.close()
+                input?.close()
             } catch (e: IOException) {
                 e.printStackTrace()
             }

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import net.opendasharchive.openarchive.R
-import net.opendasharchive.openarchive.projects.EditProjectActivity
+import net.opendasharchive.openarchive.features.projects.EditProjectActivity
 import net.opendasharchive.openarchive.util.Globals
 
 class ProjectListAdapter (

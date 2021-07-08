@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mediasection"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/mediasection"
-    xmlns:android="http://schemas.android.com/apk/res/android">
->
+    tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/sectionstatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0 Items Uploaded"
         android:layout_gravity="left"
-        android:gravity="left"
         android:layout_marginLeft="8dp"
-        android:textSize="14dp"
-        android:textStyle="bold"
         android:layout_marginTop="6dp"
-        />
+        android:gravity="left"
+        android:text="0 Items Uploaded"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/sectiontimestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:gravity="left"
-
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="8dp"
-        android:textSize="12dp"
-        android:text="Jan 1, 0000 at 0:00 PM"
         android:layout_below="@id/sectionstatus"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:gravity="left"
+        android:text="Jan 1, 0000 at 0:00 PM"
+        android:textSize="12dp" />
+
     <TextView
         android:id="@+id/action_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:gravity="right"
-        android:textSize="14dp"
-        android:text="@string/action_next"
-        android:layout_toRightOf="@id/sectiontimestamp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
         android:layout_margin="10dp"
-        android:textStyle="bold"
+        android:layout_toRightOf="@id/sectiontimestamp"
+        android:gravity="right"
+        android:text="@string/action_next"
         android:textColor="@color/oablue"
-        android:visibility="gone"
-        />
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
         android:layout_below="@+id/sectiontimestamp"
-        />
+        android:layout_marginTop="3dp" />
 </RelativeLayout>

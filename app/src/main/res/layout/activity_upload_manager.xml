@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="net.opendasharchive.openarchive.publish.UploadManagerActivity">
+    tools:context=".publish.UploadManagerActivity">
 
 
     <androidx.appcompat.widget.Toolbar

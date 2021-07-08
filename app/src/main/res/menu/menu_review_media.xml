@@ -1,27 +1,27 @@
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 
-s
-    <item android:id="@+id/menu_upload" android:title="@string/action_upload"
+    <item
+        android:id="@+id/menu_upload"
         android:orderInCategory="100"
-        app:showAsAction="never"
+        android:title="@string/action_upload"
         android:visible="false"
-
-        />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_item_share"
-        app:showAsAction="always"
+        android:icon="@drawable/ic_share_white_36dp"
         android:title="@string/menu_share"
         android:visible="false"
-        android:icon="@drawable/ic_share_white_36dp"
-        >
+        app:showAsAction="always">
         <menu>
-            <item android:id="@+id/menu_item_open_link"
+            <item
+                android:id="@+id/menu_item_open_link"
                 android:title="@string/open_link" />
-            <item android:id="@+id/menu_item_share_link"
+            <item
+                android:id="@+id/menu_item_share_link"
                 android:title="@string/share_link" />
         </menu>
 
@@ -37,6 +37,8 @@ s
         />
 -->
 
-    <item android:id="@+id/menu_delete" android:title="@string/menu_delete"/>
+    <item
+        android:id="@+id/menu_delete"
+        android:title="@string/menu_delete" />
 
 </menu>

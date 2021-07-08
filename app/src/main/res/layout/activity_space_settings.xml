@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="net.opendasharchive.openarchive.core.SpaceSettingsActivity">
-
-
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar" >
+        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,38 +21,39 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fillViewport="true"
-
                 android:layout_gravity="right|end"
-                android:gravity="right|end"
+
                 android:layout_marginEnd="48dp"
-                >
+                android:fillViewport="true"
+                android:gravity="right|end">
 
                 <LinearLayout
+                    android:id="@+id/spaceview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:id="@+id/spaceview"
                     android:layout_gravity="right|end|center_vertical"
                     android:gravity="right|end|center_vertical"
-                    android:padding="3dp"
-                    />
+                    android:orientation="horizontal"
+                    android:padding="3dp" />
+
             </androidx.core.widget.NestedScrollView>
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            app:srcCompat="@drawable/ic_add_circle_outline"
-            android:tint="@color/oablue"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="6dp"
-            android:onClick="onNewSpaceClicked"
-            />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="6dp"
+                android:onClick="onNewSpaceClicked"
+                android:tint="@color/oablue"
+                app:srcCompat="@drawable/ic_add_circle_outline" />
 
         </RelativeLayout>
+
     </androidx.appcompat.widget.Toolbar>
 
-    <include layout="@layout/content_space_settings" />
-
+    <include
+        android:id="@+id/contentSpaceLayout"
+        layout="@layout/content_space_settings" />
 
 
 </LinearLayout>

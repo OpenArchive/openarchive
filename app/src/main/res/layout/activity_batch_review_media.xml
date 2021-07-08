@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bgLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.opendasharchive.openarchive.media.ReviewMediaActivity"
     android:theme="@style/AppMediaTheme"
-    >
+    tools:context="net.opendasharchive.openarchive.media.ReviewMediaActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -18,88 +15,60 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://scgethemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="net.opendasharchive.openarchive.media.BatchReviewMediaActivity">
-
-    <HorizontalScrollView
+        xmlns:tools="http://scgethemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/item_display_scroll"
-        >
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/item_display"
-        >
-        <!--
-    <com.github.derlio.waveform.SimpleWaveformView
-        android:id="@+id/swMedia"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:waveformColor="#999999"
-        app:indicatorColor="#aa0000"
-        android:visibility="gone"
-        android:layout_marginTop="3dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
 
-        />-->
-        <!--
-    <ImageView
-        android:id="@+id/ivMedia"
-        android:contentDescription="@string/iv_content_desc"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/no_thumbnail"
-        android:background="@color/black"
-        />-->
-    </LinearLayout>
-    </HorizontalScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="net.opendasharchive.openarchive.media.BatchReviewMediaActivity">
 
-    <TableLayout
-        android:id="@+id/tblMediaMetadata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/item_display_scroll"
-        android:shrinkColumns="0"
-        android:stretchColumns="1"
-        android:padding="3dp"
-        >
+            <HorizontalScrollView
+                android:id="@+id/item_display_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
 
+                <LinearLayout
+                    android:id="@+id/item_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
 
-        <TableRow
-            android:id="@+id/tr_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_row_padding">
+            </HorizontalScrollView>
 
-            <TextView
+            <TableLayout
+                android:id="@+id/tblMediaMetadata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_url"
-                android:layout_centerVertical="true"
-                android:visibility="gone"
-                android:textSize="16dp"
-                />
-        </TableRow>
+                android:layout_below="@id/item_display_scroll"
+                android:padding="3dp"
+                android:shrinkColumns="0"
+                android:stretchColumns="1">
 
+                <TableRow
+                    android:id="@+id/tr_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_row_padding">
 
-        <include layout="@layout/activity_archive_metadata"/>
+                    <TextView
+                        android:id="@+id/tv_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16dp"
+                        android:visibility="gone" />
+                </TableRow>
 
-    </TableLayout>
+                <include
+                    android:id="@+id/archiveMetadataLayout"
+                    layout="@layout/activity_archive_metadata" />
 
-
-</RelativeLayout>
-</ScrollView>
-
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

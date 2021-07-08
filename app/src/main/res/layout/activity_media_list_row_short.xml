@@ -52,7 +52,7 @@
                android:layout_height="60dp"
                android:scaleType="centerCrop"
                android:layout_marginTop="3dp"
-                android:src="@drawable/no_thumbnail"
+               android:src="@drawable/no_thumbnail"
         />
 
     <com.github.derlio.waveform.SimpleWaveformView

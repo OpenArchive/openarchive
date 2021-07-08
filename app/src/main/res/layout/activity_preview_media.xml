@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="net.opendasharchive.openarchive.publish.UploadManagerActivity"
     android:theme="@style/AppMediaTheme"
-    >
+    tools:context="net.opendasharchive.openarchive.publish.UploadManagerActivity">
 
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:titleTextAppearance="@style/Toolbar.TitleText"
-        />
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
 
     <!--android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"-->
 
     <fragment
-            android:id="@+id/fragUploadManager"
-            class="net.opendasharchive.openarchive.fragments.MediaReviewListFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+        android:id="@+id/fragUploadManager"
+        class="net.opendasharchive.openarchive.features.media.MediaReviewListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

@@ -7,8 +7,8 @@ import android.text.style.ImageSpan
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import net.opendasharchive.openarchive.R
-import net.opendasharchive.openarchive.fragments.MediaGridFragment
-import net.opendasharchive.openarchive.fragments.NewProjectFragment
+import net.opendasharchive.openarchive.features.media.grid.MediaGridFragment
+import net.opendasharchive.openarchive.features.media.NewProjectFragment
 import net.opendasharchive.openarchive.util.SmartFragmentStatePagerAdapter
 
 class ProjectAdapter( private val context: Context, fragmentManager: FragmentManager) : SmartFragmentStatePagerAdapter(fragmentManager) {

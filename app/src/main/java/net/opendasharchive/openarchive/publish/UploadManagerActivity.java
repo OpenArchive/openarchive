@@ -15,7 +15,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import net.opendasharchive.openarchive.R;
 import net.opendasharchive.openarchive.db.Media;
-import net.opendasharchive.openarchive.fragments.MediaListFragment;
+import net.opendasharchive.openarchive.features.media.list.MediaListFragment;
 
 import static io.scal.secureshareui.controller.SiteController.MESSAGE_KEY_MEDIA_ID;
 import static io.scal.secureshareui.controller.SiteController.MESSAGE_KEY_PROGRESS;
@@ -103,8 +103,6 @@ public class UploadManagerActivity extends AppCompatActivity {
         else {
             mMenuEdit.setTitle(R.string.menu_edit);
             startService(new Intent(this, PublishService.class));
-
-
         }
     }
 

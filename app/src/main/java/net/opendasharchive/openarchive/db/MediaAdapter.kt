@@ -11,9 +11,9 @@ import com.orm.SugarRecord.find
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import net.opendasharchive.openarchive.R
-import net.opendasharchive.openarchive.fragments.MediaListFragment
-import net.opendasharchive.openarchive.media.BatchReviewMediaActivity
-import net.opendasharchive.openarchive.media.ReviewMediaActivity
+import net.opendasharchive.openarchive.features.media.batch.BatchReviewMediaActivity
+import net.opendasharchive.openarchive.features.media.list.MediaListFragment
+import net.opendasharchive.openarchive.features.media.review.ReviewMediaActivity
 import net.opendasharchive.openarchive.util.Globals
 import net.opendasharchive.openarchive.util.Prefs
 

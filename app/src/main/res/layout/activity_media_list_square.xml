@@ -1,73 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:layout_margin="0dp"
+    android:orientation="vertical"
     android:padding="6dp">
 
     <LinearLayout
+        android:id="@+id/ivGroup"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:id="@+id/ivGroup"
+        android:layout_margin="0dp"
         android:orientation="vertical"
-        android:padding="0dp"
-        android:layout_margin="0dp"
-        >
-    <ImageView android:id="@+id/ivIcon"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:scaleType="centerCrop"
-               android:layout_margin="0dp"
-                android:src="@drawable/no_thumbnail"
+        android:padding="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressImageUpload"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
                 android:padding="0dp"
-        />
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_thumbnail" />
 
-    <com.github.derlio.waveform.SimpleWaveformView
-        android:id="@+id/event_item_sound"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:waveformColor="#999999"
-        app:indicatorColor="#aa0000"
-        android:visibility="gone"
-        android:layout_margin="0dp"
 
-        />
+        </FrameLayout>
 
+
+        <com.github.derlio.waveform.SimpleWaveformView
+            android:id="@+id/event_item_sound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:visibility="gone"
+            app:indicatorColor="#aa0000"
+            app:waveformColor="#999999" />
 
     </LinearLayout>
 
-    <TextView android:id="@+id/tvTitle"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivGroup"
-        android:layout_margin="16dp"
-
         android:layout_centerVertical="true"
-        android:singleLine="true"
-        android:visibility="gone"
-
-        />
-
-    <TextView android:id="@+id/tvCreateDate"
-        android:layout_below="@+id/ivGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:singleLine="true"
         android:visibility="gone"
-        />
+        tools:text="title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvCreateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivGroup"
+        android:layout_margin="16dp"
+        android:singleLine="true"
+        android:visibility="gone"
+        tools:text="create date"
+        tools:visibility="visible" />
 
 
     <ImageView
+        android:id="@+id/iconVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_videocam_black_24dp"
         android:layout_alignParentBottom="true"
-        android:tint="@color/white"
-        android:id="@+id/iconVideo"
+        android:src="@drawable/ic_videocam_black_24dp"
         android:visibility="gone"
-        />
+        app:tint="@color/white"
+        tools:text="title"
+        tools:visibility="visible" />
 </RelativeLayout>
 

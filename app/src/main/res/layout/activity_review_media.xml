@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bgLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.opendasharchive.openarchive.media.ReviewMediaActivity"
     android:theme="@style/AppMediaTheme"
-    >
+    tools:context="net.opendasharchive.openarchive.features.media.review.ReviewMediaActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -18,81 +16,73 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://scgethemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="net.opendasharchive.openarchive.media.ReviewMediaActivity">
-
-    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://scgethemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/item_display"
+        android:layout_marginTop="?attr/actionBarSize">
 
-        >
-    <com.github.derlio.waveform.SimpleWaveformView
-        android:id="@+id/swMedia"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:waveformColor="#999999"
-        app:indicatorColor="#aa0000"
-        android:visibility="gone"
-        android:layout_marginTop="3dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="net.opendasharchive.openarchive.media.ReviewMediaActivity">
 
-        />
-    <ImageView
-        android:id="@+id/ivMedia"
-        android:contentDescription="@string/iv_content_desc"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/no_thumbnail"
-        android:background="@color/black"
-        />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item_display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    <TableLayout
-        android:id="@+id/tblMediaMetadata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/item_display"
-        android:shrinkColumns="0"
-        android:stretchColumns="1"
-        android:padding="3dp"
-        >
+                <com.github.derlio.waveform.SimpleWaveformView
+                    android:id="@+id/swMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"
+                    app:indicatorColor="#aa0000"
+                    app:waveformColor="#999999" />
 
+                <ImageView
+                    android:id="@+id/ivMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/black"
+                    android:contentDescription="@string/iv_content_desc"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/no_thumbnail" />
+            </LinearLayout>
 
-        <TableRow
-            android:id="@+id/tr_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_row_padding">
-
-            <TextView
+            <TableLayout
+                android:id="@+id/tblMediaMetadata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_url"
-                android:layout_centerVertical="true"
-                android:visibility="gone"
-                android:textSize="16dp"
-                />
-        </TableRow>
+                android:layout_below="@id/item_display"
+                android:padding="3dp"
+                android:shrinkColumns="0"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:id="@+id/tr_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_row_padding">
+
+                    <TextView
+                        android:id="@+id/tv_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="16dp"
+                        android:visibility="gone" />
+                </TableRow>
+
+                <include android:id="@+id/review_metadata" layout="@layout/activity_archive_metadata" />
+
+            </TableLayout>
 
 
-        <include layout="@layout/activity_archive_metadata"/>
-
-    </TableLayout>
-
-
-</RelativeLayout>
-</ScrollView>
-
+        </RelativeLayout>
+    </ScrollView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

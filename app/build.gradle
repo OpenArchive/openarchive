@@ -3,10 +3,11 @@ apply plugin: 'kotlin-android'
 apply from : '../dependencies.gradle'
 apply from : '../config.gradle'
 
-def dropboxKey = "\"foo\""
-
-if (project.hasProperty("dropbox_key"))
-    dropboxKey = project.ext.dropbox_key
+def getDropboxKey() {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    return properties.getProperty("dropbox_key");
+}
 
 android {
     compileOptions {
@@ -41,15 +42,15 @@ android {
     flavorDimensions "free"
     buildTypes {
         debug {
-            buildConfigField "String", "dropbox_key", dropboxKey
-            resValue 'string', "dropbox_key", dropboxKey
+            buildConfigField "String", "dropbox_key", getDropboxKey()
+            resValue 'string', "dropbox_key", getDropboxKey()
         }
 
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "dropbox_key", dropboxKey
-            resValue 'string', "dropbox_key", dropboxKey
+            buildConfigField "String", "dropbox_key", getDropboxKey()
+            resValue 'string', "dropbox_key", getDropboxKey()
         }
     }
     packagingOptions {
@@ -68,6 +69,10 @@ android {
 
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 
 }
@@ -133,6 +138,15 @@ dependencies {
 
     //alerter
     implementation libraries.alerter
+
+    //glide
+    implementation libraries.glide
+    annotationProcessor libraries.glideAnnotate
+
+    implementation "androidx.work:work-runtime-ktx:2.5.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
 
 }
 
